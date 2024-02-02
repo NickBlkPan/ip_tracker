@@ -1,0 +1,94 @@
+.ipControl {
+    min-height: 300px;
+    background: no-repeat url('./../../assets/img/layout/pattern-bg-mobile.png');
+    padding: 0 25px 0 25px;
+}
+
+.ipControl__heading {
+    font-size: 25px;
+    text-align: center;
+    color: #ffffff;
+    padding: 26px 0 28px 0;
+}
+
+.ipControl__wrapper {
+    position: relative;
+    max-width: 500px;
+    height: 60px;
+    margin: 0 auto;
+}
+
+.ipControl__input {
+    font-family: Rubik, serif;
+    font-size: 18px;
+    height: 100%;
+    width: 85%;
+    padding-left: 20px;
+    border: none;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.ipControl__input--error::placeholder {
+    color: red;
+}
+
+.ipControl__input:hover:enabled {
+    border: 1px solid #969696;
+    background-color: #f1f0f0;
+}
+
+.ipControl__button {
+    height: 100%;
+    width: 15%;
+    background-color: black;
+    border: none;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    cursor: pointer;
+}
+
+.ipControl__button:hover:enabled {
+    border: 1px solid #969696;
+    background-color: #252626;
+}
+
+.ipControl__button:disabled {
+    pointer-events: none;
+    cursor: not-allowed;
+    opacity: 0.65;
+    box-shadow: none;
+}
+
+/* Media Queries */
+@media (min-width: 376px) {
+    .ipControl {
+        min-height: 280px;
+        background: no-repeat url('./../../assets/img/layout/pattern-bg-desktop.png');
+    }
+}
+
+@media (min-width: 1024px) {
+    .ipControl__heading {
+        font-size: 30px;
+        padding: 30px 0 28px 0;
+    }
+
+    .ipControl__wrapper {
+        max-width: 550px;
+    }
+
+    .ipControl__input {
+        width: 90%;
+    }
+
+    .ipControl__button {
+        width: 10%;
+    }
+}
+
+@media (min-width: 1441px) {
+    .ipControl {
+        background-size: cover;
+    }
+}

@@ -1,0 +1,12 @@
+.errorPage {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #eae9e9;
+}
+
+.errorPage__image {
+    width: 200px;
+    height: 200px;
+}
