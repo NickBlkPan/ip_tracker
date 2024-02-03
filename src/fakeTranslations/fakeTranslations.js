@@ -1,3 +1,4 @@
+// Info: Quick and easy way so minimally simulate translations, so that we don't keep the strings directly in the project
 const fakeTranslations = {
     ipInformation: {
         IP_ADDRESS: 'ip address',

@@ -12,9 +12,16 @@ import { Icon } from 'leaflet';
 
 import { ErrorPage } from '../ErrorPage';
 
+// Info: I like to do all of my destructuring and declarations outside the component whenever possible, so that they don't re-run all the time
+// when the component re-renders
 const { map: { POPUP, TITLE_LAYER } } = fakeTranslations;
 const { color, height, width, visible } = barsSettings;
 const { zoom, zoomControl, scrollWheelZoom } = mapSettings;
+
+const customIcon = new Icon({
+    iconUrl: pin,
+    iconSize: [46, 56]
+});
 
 const Map = ({ isFetching, ipLocationInformation = {} }) => {
     if (isFetching) {
@@ -38,11 +45,6 @@ const Map = ({ isFetching, ipLocationInformation = {} }) => {
     ) {
         return <ErrorPage />;
     }
-
-    const customIcon = new Icon({
-        iconUrl: pin,
-        iconSize: [46, 56]
-    });
     
     const mapContainerKey = `${ipLocationInformation.lat}_${ipLocationInformation.lng}`;
     const geoCoordinate = [ipLocationInformation.lat, ipLocationInformation.lng];

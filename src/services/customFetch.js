@@ -11,6 +11,7 @@ const customFetch = async (url) => {
 
         return res.json();
     } catch (e) {
+        // Info: we would probably do something more productive with this error in a real scenario
         console.error(`Oh no! Something happened ${e}`);
     }
 }
