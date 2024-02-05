@@ -15,7 +15,7 @@
     background-color: #ffffff;
     border-radius: 15px;
     box-shadow: 2px 3px 2px -1px rgb(0 0 0 / 20%);
-    transition: max-height, padding, top 0.3s ease-in;
+    transition: max-height, padding 0.3s ease-in;
 }
 
 .ipInformation.ipInformation--collapsed {
@@ -27,8 +27,8 @@
     transition-timing-function: ease-out;
 }
 
-.ipInformation--collapsed img {
-    transform: rotateZ(180deg);
+.ipInformation--collapsed .ipInformation__close > img {
+    transform: unset;
 }
 
 .ipInformation--collapsed .ipInformation__title,
@@ -84,11 +84,14 @@
     height: 20px;
     width: 30px;
     transition: all 0.5s ease-in-out;
+    transform: rotateZ(180deg);
 }
 
 /* Media Queries */
 @media (min-width: 376px) {
     .ipInformation.ipInformation--collapsed {
+        transition-property: top;
+        transition: top 0s ease-in;
         top: 280px;
     }
 }
