@@ -1,10 +1,10 @@
 import './App.css';
 import { useEffect, useState } from 'react';
+import { getIpInformation } from './common/utils';
 
 import { IpControl, Map } from './components';
 import { customFetch } from './services';
 import { IPIFY_URL } from './common/constants';
-import { getIpInformation } from './common/utils';
 
 function App() {
     const [isFetching, setIsFetching] = useState(true);
@@ -24,7 +24,7 @@ function App() {
             const fetchUserIpInformation = async () => {
                 setIsFetching(true);
 
-                const { ip: userIp } = await customFetch(IPIFY_URL);
+                const { ip: userIp } = await customFetch(IPIFY_URL) || {};
                 const userIpInformation = await getIpInformation(`&ipAddress=${userIp}`);
 
                 setIpInformation(userIpInformation);

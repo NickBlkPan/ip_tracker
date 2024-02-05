@@ -5,7 +5,7 @@ const customFetch = async (url) => {
         // Info: simulate delay for the loader to show, change timeout value if annoying
         await new Promise(resolve => setTimeout(resolve, 3000));
         
-        const res = await fetch(`${url}`);
+        const res = await fetch(url);
 
         if (!res.ok) throw Error(res.statusText);
 

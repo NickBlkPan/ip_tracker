@@ -1,10 +1,12 @@
 .ipInformation {
+    max-height: 400px;
     width: 100%;
     max-width: 400px;
     position: absolute;
     left: 50%;
-    transform: translateX(-50%);
     top: 80px;
+    z-index: 4;
+    transform: translateX(-50%);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -12,7 +14,28 @@
     padding: 15px;
     background-color: #ffffff;
     border-radius: 15px;
-    z-index: 4;
+    box-shadow: 2px 3px 2px -1px rgb(0 0 0 / 20%);
+    transition: max-height, padding, top 0.3s ease-in;
+}
+
+.ipInformation.ipInformation--collapsed {
+    position: fixed;
+    max-height: 0;
+    top: 300px;
+    padding: 0;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+}
+
+.ipInformation--collapsed img {
+    transform: rotateZ(180deg);
+}
+
+.ipInformation--collapsed .ipInformation__title,
+.ipInformation--collapsed .ipInformation__value {
+    transition-duration: 0s;
+    transition-timing-function: ease-out;
+    opacity: 0;
 }
 
 .ipInformation__item {
@@ -35,6 +58,7 @@
     font-size: 12px;
     font-weight: 700;
     color: #969696;
+    transition: opacity 1s ease-in;
 }
 
 .ipInformation__value {
@@ -42,9 +66,33 @@
     font-size: 19px;
     font-weight: 700;
     color: #2B2B2B;
+    transition: opacity 1s ease-in;
+}
+
+.ipInformation__close {
+    position: absolute;
+    top: 100%;
+    border: navajowhite;
+    box-shadow: 2px 3px 2px -1px rgb(0 0 0 / 20%);
+    background-color: #ffffff;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+}
+
+.ipInformation__close > img {
+    height: 20px;
+    width: 30px;
+    transition: all 0.5s ease-in-out;
 }
 
 /* Media Queries */
+@media (min-width: 376px) {
+    .ipInformation.ipInformation--collapsed {
+        top: 280px;
+    }
+}
+
 @media (min-width: 768px) {
     .ipInformation {
         width: 90vw;
