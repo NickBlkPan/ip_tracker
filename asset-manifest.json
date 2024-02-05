@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/ip_tracker/static/css/main.610769e9.css",
+    "main.css": "/ip_tracker/static/css/main.b4cbba6a.css",
     "main.js": "/ip_tracker/static/js/main.c1d7da3a.js",
     "static/media/Rubik-VariableFont_wght.ttf": "/ip_tracker/static/media/Rubik-VariableFont_wght.3a4acc0356c6ea73f2c3.ttf",
     "static/media/pattern-bg-desktop.png": "/ip_tracker/static/media/pattern-bg-desktop.5013c4f570ecf757f855.png",
@@ -9,11 +9,11 @@
     "index.html": "/ip_tracker/index.html",
     "static/media/icon-location.svg": "/ip_tracker/static/media/icon-location.037a0039d5c6bb1ef979664f1a30407e.svg",
     "static/media/icon-arrow.svg": "/ip_tracker/static/media/icon-arrow.9d86d52841e9aae357548ad28241d05d.svg",
-    "main.610769e9.css.map": "/ip_tracker/static/css/main.610769e9.css.map",
+    "main.b4cbba6a.css.map": "/ip_tracker/static/css/main.b4cbba6a.css.map",
     "main.c1d7da3a.js.map": "/ip_tracker/static/js/main.c1d7da3a.js.map"
   },
   "entrypoints": [
-    "static/css/main.610769e9.css",
+    "static/css/main.b4cbba6a.css",
     "static/js/main.c1d7da3a.js"
   ]
 }
